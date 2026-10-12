@@ -1,6 +1,6 @@
 // Offline support for the hosted site: open the site once with internet, then it keeps working with none.
 // Network first (always the newest version when online), cache as fallback (offline). Not used from file://.
-const CACHE = "valu-story-v2-202610121907";
+const CACHE = "valu-story-v2-202610121912";
 const FILES = [
 "./",
 "./assets/media/ch01.jpg",
@@ -77,6 +77,6 @@ self.addEventListener("install", (e) => { e.waitUntil(caches.open(CACHE).then((c
 self.addEventListener("activate", (e) => { e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k !== CACHE).map((k) => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener("fetch", (e) => {
   if (e.request.method !== "GET") return;
-  e.respondWith(fetch(e.request).then((r) => { const copy = r.clone(); caches.open(CACHE).then((c) => c.put(e.request, copy)); return r; })
+  e.respondWith(fetch(e.request, { cache: "no-cache" }).then((r) => { const copy = r.clone(); caches.open(CACHE).then((c) => c.put(e.request, copy)); return r; })
     .catch(() => caches.match(e.request, { ignoreSearch: true }).then((r) => r || caches.match("./index.html"))));
 });
