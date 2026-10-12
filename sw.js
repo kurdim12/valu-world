@@ -1,6 +1,6 @@
 // Offline support for the hosted site: open the site once with internet, then it keeps working with none.
 // Network first (always the newest version when online), cache as fallback (offline). Not used from file://.
-const CACHE = "valu-story-v2-202610121827";
+const CACHE = "valu-story-v2-202610121907";
 const FILES = [
 "./",
 "./assets/media/ch01.jpg",

@@ -76,7 +76,7 @@ window.VALU_STORY = {
       title: { en: "Valu Café", ar: "ڤاليو كافيه" }, // AR-REVIEW
       media: {"type":"image","src":"assets/media/ch06.jpg"},
       moment: {"type":"cafe","lights":[[-38,20],[-18,17],[2,13],[22,9],[40,5]]},
-      lead: { en: "Then Valu became something customers could experience.", ar: "صارت ڤاليو تجربة بتقدرتعيشها." }, // AR-REVIEW
+      lead: { en: "Then Valu became something customers could experience.", ar: "صارت ڤاليو تجربة بتقدر تعيشها." }, // AR-REVIEW
       body: { en: "Valu Café brought finance into everyday lifestyle, creating a space for coffee, community, connection, and the wider Valu ecosystem. Finance became an experience. Valu became a destination.", ar: "ڤاليو كافيه قرّبت ڤاليو أكتر بحياة الناس اليومية، من خلال مساحة بتجمع القهوة، والتواصل، والتجارب المختلفة، وبتقدّم منظومة ڤاليو بطريقة أقرب للناس. الخدمات المالية صارت تجربة، ڤاليو صارت وجهة." } // AR-REVIEW
     },
     {
