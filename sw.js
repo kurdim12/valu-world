@@ -1,6 +1,6 @@
 // Offline support for the hosted site: open the site once with internet, then it keeps working with none.
 // Network first (always the newest version when online), cache as fallback (offline). Not used from file://.
-const CACHE = "valu-story-v2-202610121508";
+const CACHE = "valu-story-v2-202610121512";
 const FILES = [
 "./",
 "./assets/media/ch01.jpg",
@@ -70,7 +70,7 @@ const FILES = [
 "./vendor/d3-array.min.js",
 "./vendor/d3-geo.min.js"
 ];
-self.addEventListener("install", (e) => { e.waitUntil(caches.open(CACHE).then((c) => c.addAll(FILES)).then(() => self.skipWaiting())); });
+self.addEventListener("install", (e) => { e.waitUntil(caches.open(CACHE).then((c) => Promise.all(FILES.map((f) => c.add(f).catch(() => null)))).then(() => self.skipWaiting())); });
 self.addEventListener("activate", (e) => { e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k !== CACHE).map((k) => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener("fetch", (e) => {
   if (e.request.method !== "GET") return;
