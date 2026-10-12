@@ -66,7 +66,7 @@ window.VALU_STORY = {
     {
       id: 5, side: "egypt", fx: "products", year: "",
       title: { en: "Beyond BNPL", ar: "أكثر من مجرد وسيلة للشراء الان والدفع لاحقا" }, // AR-REVIEW
-      media: {"type":"logos","dir":"assets/media/logos/","items":[["business",800,108],["flip",531,209],["u",461,264],["akeed",800,128],["invest",800,143],["shazlabaz",800,81],["family",683,185],["mazak",778,126],["ulter",648,186],["aceit",466,213],["azvalu",800,121]]},
+      media: {"type":"logos","dir":"assets/media/logos/","items":[["business",800,108],["flip",531,209],["u",461,264],["sparkit",311,137],["creditcard",232,145],["prepaidcard",231,130],["invest",800,143],["shazlabaz",800,81],["family",683,185],["mazak",778,126],["ulter",214,62],["shift",169,70],["loans",223,47],["azvalu",800,121]]},
       moment: {"type":"lanterns","r":75},
       lead: { en: "BNPL was only the beginning.", ar: "الشراء الآن والدفع لاحقا كان بس البداية." }, // AR-REVIEW
       body: { en: "As customers’ needs grew, Valu evolved from a single payment solution into a wider financial ecosystem spanning financing, payments, savings, investments, cards, and more. From one product to many. From BNPL to an integrated financial ecosystem.", ar: "ومع تطوّر احتياجات العملاء، تطورت ڤاليو من حل واحد لمنظومة مالية متكاملة، بتجمع التمويل، والدفع، والادخار، والاستثمار، والبطاقات وغيرها. من منتج واحد لعدة حلول. ومن الشراء الآن والدفع لاحقا لمنظومة مالية متكاملة." } // AR-REVIEW

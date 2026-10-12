@@ -1,6 +1,6 @@
 // Offline support for the hosted site: open the site once with internet, then it keeps working with none.
 // Network first (always the newest version when online), cache as fallback (offline). Not used from file://.
-const CACHE = "valu-story-v2-202610121512";
+const CACHE = "valu-story-v2-202610121654";
 const FILES = [
 "./",
 "./assets/media/ch01.jpg",
@@ -27,15 +27,18 @@ const FILES = [
 "./assets/media/icons/sports.svg",
 "./assets/media/icons/supermarket.svg",
 "./assets/media/icons/travel.svg",
-"./assets/media/logos/aceit.png",
-"./assets/media/logos/akeed.png",
 "./assets/media/logos/azvalu.png",
 "./assets/media/logos/business.png",
+"./assets/media/logos/creditcard.png",
 "./assets/media/logos/family.png",
 "./assets/media/logos/flip.png",
 "./assets/media/logos/invest.png",
+"./assets/media/logos/loans.png",
 "./assets/media/logos/mazak.png",
+"./assets/media/logos/prepaidcard.png",
 "./assets/media/logos/shazlabaz.png",
+"./assets/media/logos/shift.png",
+"./assets/media/logos/sparkit.png",
 "./assets/media/logos/u.png",
 "./assets/media/logos/ulter.png",
 "./assets/sprites/plot-A.png",
