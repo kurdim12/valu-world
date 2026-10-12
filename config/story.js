@@ -101,7 +101,7 @@ window.VALU_STORY = {
       media: {"type":"image","src":"assets/media/ch09.jpg"},
       moment: {"type":"towers","towers":[[-56,53,144],[12,61,184],[-8,85,120],[64,77,136]]},
       lead: { en: "Taking King Hussein Business Park as our HQ, Valu expanded to many locations.", ar: "من مجمع الملك الحسين للأعمال، مقرّنا، توسّعت ڤاليو لمواقع كثيرة." }, // AR-REVIEW (NOT FROM THE DECK, written by us)
-      body: { en: "Taking King Hussein Business Park as our HQ, Valu expanded to many locations from Taj Mall to Swefieh Village and soon in Khalda, ready to enable new customers and make “⁨اللي مش وقته⁩” ... “⁨هلأ صار وقته⁩”", ar: "من مجمع الملك الحسين للأعمال، مقرّنا، توسّعت ڤاليو لمواقع كثيرة من تاج مول لـ Swefieh Village وقريباً بخلدا، جاهزين نمكّن عملاء جدد ونخلّي \"اللي مش وقته\" ... \"هلأ صار وقته\"" } // AR-REVIEW (NOT FROM THE DECK, written by us)
+      body: { en: "Taking King Hussein Business Park as our HQ, Valu expanded to many locations from Taj Mall to Swefieh Village and soon in Khalda, ready to enable new customers.", ar: "من مجمع الملك الحسين للأعمال، مقرّنا، توسّعت ڤاليو لمواقع كثيرة من تاج مول لـ Swefieh Village وقريباً بخلدا، جاهزين نمكّن عملاء جدد ونخلّي \"اللي مش وقته\" ... \"هلأ صار وقته\"" } // AR-REVIEW (NOT FROM THE DECK, written by us)
     }
   ]
 };
