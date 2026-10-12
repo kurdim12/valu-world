@@ -49,7 +49,7 @@ window.VALU_STORY = {
     },
     {
       id: 3, side: "egypt", fx: "network", year: "",
-      title: { en: "The Ripple Effect", ar: "شركات تولد آثر" }, // AR-REVIEW
+      title: { en: "The Ripple Effect", ar: "شراكات تولد أثر" }, // AR-REVIEW
       media: {"type":"categories","dir":"assets/media/icons/","h":300,"icons":["home","business","appliances","travel","sports","education","services","family","gifts","others","jewelry","health","auto","fashion","food","beauty","supermarket","department"]},
       moment: {"type":"nile","bridge":[[-178,-6],[-60,-4],[60,0],[177,8]]},
       lead: { en: "Growth created momentum.", ar: "مع النمو، كبرت شبكة ڤاليو" }, // AR-REVIEW
@@ -61,7 +61,7 @@ window.VALU_STORY = {
       media: {"type":"spark"},
       moment: {"type":"rise","from":[0,100],"to":[0,-150]},
       lead: { en: "Valu entered a new era.", ar: "دخلت ڤاليو مرحلة جديدة من رحلتها." }, // AR-REVIEW
-      body: { en: "With a new headquarters, refreshed identity, growing team, and bigger ambitions, Valu evolved beyond payments and installments into a fintech brand built around people’s everyday financial lives. Spark Mode wasn’t just a rebrand. It marked Valu becoming a bigger, bolder version of itself.", ar: "مع مقر جديد، وهوية متجددة، وفريق وطموحات أكبر، تطورت ڤاليو من مجرد حلول للدفع مرنة لعلامة تكنولوجيا مالية أقرب لحياة الناس المالية اليومية. سبارك مود ما كان مجرد تغيير بالهوية، كان بداية لنسخة أكبر وأجرأ من ڤاليو." } // AR-REVIEW
+      body: { en: "With a new headquarters, refreshed identity, growing team, and bigger ambitions, Valu evolved beyond payments and installments into a fintech brand built around people’s everyday financial lives. Spark Mode wasn’t just a rebrand. It marked Valu becoming a bigger, bolder version of itself.", ar: "مع مقر جديد، وهوية متجددة، وفريق وطموحات أكبر، تطورت ڤاليو من مجرد حلول دفع مرنة لعلامة تكنولوجيا مالية أقرب لحياة الناس اليومية. سبارك مود ما كان مجرد تغيير بالهوية، كان بداية لنسخة أكبر وأجرأ من ڤاليو." } // AR-REVIEW
     },
     {
       id: 5, side: "egypt", fx: "products", year: "",
@@ -100,8 +100,8 @@ window.VALU_STORY = {
       title: { en: "Official Launch", ar: "الإطلاق الرسمي" }, // AR-REVIEW
       media: {"type":"image","src":"assets/media/ch09.jpg"},
       moment: {"type":"towers","towers":[[-56,53,144],[12,61,184],[-8,85,120],[64,77,136]]},
-      lead: { en: "Taking King Hussein as our HQ, Valu expanded to many locations.", ar: "من شارع الملك حسين، مقرّنا، توسّعت ڤاليو لمواقع كثيرة." }, // AR-REVIEW (NOT FROM THE DECK, written by us)
-      body: { en: "Taking King Hussein as our HQ, Valu expanded to many locations from Taj Mall to SV and soon in Khalda, ready to enable new customers and make “⁨اللي مش وقته⁩” ... “⁨هلأ صار وقته⁩”", ar: "من شارع الملك حسين، مقرّنا، توسّعت ڤاليو لمواقع كثيرة من تاج مول لـ SV وقريباً بخلدا، جاهزين نمكّن عملاء جدد ونخلّي \"اللي مش وقته\" ... \"هلأ صار وقته\"" } // AR-REVIEW (NOT FROM THE DECK, written by us)
+      lead: { en: "Taking King Hussein Business Park as our HQ, Valu expanded to many locations.", ar: "من مجمع الملك الحسين للأعمال، مقرّنا، توسّعت ڤاليو لمواقع كثيرة." }, // AR-REVIEW (NOT FROM THE DECK, written by us)
+      body: { en: "Taking King Hussein Business Park as our HQ, Valu expanded to many locations from Taj Mall to Swefieh Village and soon in Khalda, ready to enable new customers and make “⁨اللي مش وقته⁩” ... “⁨هلأ صار وقته⁩”", ar: "من مجمع الملك الحسين للأعمال، مقرّنا، توسّعت ڤاليو لمواقع كثيرة من تاج مول لـ Swefieh Village وقريباً بخلدا، جاهزين نمكّن عملاء جدد ونخلّي \"اللي مش وقته\" ... \"هلأ صار وقته\"" } // AR-REVIEW (NOT FROM THE DECK, written by us)
     }
   ]
 };
