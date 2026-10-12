@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Touch test</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #00C4B3; font-family: system-ui, sans-serif; touch-action: none; user-select: none; -webkit-user-select: none; }
+  #hud { position: fixed; left: 50%; top: 40px; transform: translateX(-50%); background: #fff; border-radius: 24px; padding: 18px 34px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,.2); }
+  #now { font-size: 96px; font-weight: 800; color: #FF5100; line-height: 1; }
+  #max { font-size: 28px; margin-top: 6px; }
+  #max.ok { color: #0a9; font-weight: 800; }
+  .hint { color: #636569; font-size: 18px; margin-top: 6px; }
+  .d { position: fixed; width: 110px; height: 110px; margin: -55px 0 0 -55px; border-radius: 50%; border: 5px solid #fff; color: #fff; font: 800 40px/100px system-ui; text-align: center; pointer-events: none; }
+  button { font-size: 20px; padding: 12px 20px; border-radius: 14px; border: 0; background: #f2ebe5; margin: 10px 6px 0; font-weight: 700; }
+</style>
+</head>
+<body>
+<div id="hud">
+  <div id="now">0</div>
+  <div id="max">Max reached: 0</div>
+  <div class="hint">Need 8+ (4 people × 2 hands) → turns green</div>
+  <button id="reset">Reset max</button><button id="fs">Fullscreen</button>
+</div>
+<script>
+  const pts = new Map(); let max = 0;
+  const cols = ["#FF5100", "#8347AD", "#0b8f84", "#e0a100", "#3a7bd5", "#d6336c", "#2f9e44", "#6b4f3a", "#5f3dc4", "#c2255c"];
+  const now = document.getElementById("now"), mx = document.getElementById("max");
+  function upd() { now.textContent = pts.size; max = Math.max(max, pts.size); mx.textContent = "Max reached: " + max; mx.className = max >= 8 ? "ok" : ""; }
+  function free() { const used = new Set([...pts.values()].map((p) => p.n)); let n = 1; while (used.has(n)) n++; return n; }
+  document.addEventListener("pointerdown", (e) => {
+    if (e.target.tagName === "BUTTON") return;
+    const n = free(), d = document.createElement("div");
+    d.className = "d"; d.textContent = n; d.style.background = cols[(n - 1) % cols.length];
+    document.body.appendChild(d); pts.set(e.pointerId, { n, d }); move(e); upd();
+  });
+  function move(e) { const p = pts.get(e.pointerId); if (p) { p.d.style.left = e.clientX + "px"; p.d.style.top = e.clientY + "px"; } }
+  document.addEventListener("pointermove", move);
+  ["pointerup", "pointercancel"].forEach((ev) => document.addEventListener(ev, (e) => { const p = pts.get(e.pointerId); if (p) { p.d.remove(); pts.delete(e.pointerId); upd(); } }));
+  ["contextmenu", "selectstart"].forEach((ev) => document.addEventListener(ev, (e) => e.preventDefault()));
+  document.addEventListener("touchmove", (e) => e.preventDefault(), { passive: false });
+  document.getElementById("reset").onclick = () => { max = 0; upd(); };
+  document.getElementById("fs").onclick = () => { const d = document.documentElement; (d.requestFullscreen || d.webkitRequestFullscreen).call(d); };
+</script>
+</body>
+</html>

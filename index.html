@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#00C4B3">
+<title>The Valu Story</title>
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div id="stage">
+  <!-- Layers, bottom → top (spec §5) -->
+  <div id="cam" class="cam full">             <!-- the world: zooms and pans together (js/camera.js) -->
+    <img id="world" alt="" draggable="false">  <!-- assets/world.jpg (4K) -->
+    <div id="overlay" class="full"></div>       <!-- landmark glows + plot outlines -->
+    <div id="movers" class="full"></div>        <!-- cars, boats, plane (below buildings) -->
+    <div id="buildings" class="full"></div>     <!-- SVG buildings rising on the plots -->
+    <div id="labels" class="full"></div>        <!-- story points + label pills -->
+    <canvas id="fx" class="full" width="1920" height="1080"></canvas>
+    <div id="pops" class="full"></div>          <!-- pop-up icons, the Spark drawing itself -->
+  </div>
+  <div id="links" class="full"></div>         <!-- card connector lines (screen space, above the world, under cards) -->
+  <div id="hit" class="full"></div>           <!-- invisible tap layer (screen space; taps → world via the camera) -->
+  <div id="cam2" class="cam full">
+    <div id="drag" class="full"></div>          <!-- the bridge Spark guests can drag (chapter 08) -->
+  </div>
+  <div id="hud" class="full"></div>           <!-- title pill + headline -->
+  <div id="cards"></div>
+  <div id="intro"></div>                      <!-- start screen: removed 12 Oct (client); js/intro.js still provides the language switch -->
+  <div id="boot">The Valu Story</div>
+  <div id="dots" class="full"></div>
+  <div id="debug"></div>
+  <div id="corner"><div class="fill"></div></div>
+  <div id="admin"></div>
+  <div id="editor"></div>
+</div>
+
+<!-- Classic scripts in a fixed order: no modules, no fetch → runs from file:// -->
+<script src="config/story.js"></script>
+<script src="config/media.js"></script>
+<script src="config/layout.js"></script>
+<script src="config/sprites.js"></script>
+<script src="config/watermask.js"></script>
+<script src="config/globe.js"></script>
+<script src="vendor/d3-array.min.js"></script>
+<script src="vendor/d3-geo.min.js"></script>
+<script src="js/util.js"></script>
+<script src="js/stage.js"></script>
+<!-- camera.js needs the loop + stage; it is started after story.js exists (see below) -->
+<script src="js/audio.js"></script>
+<script src="js/art.js"></script>
+<script src="js/fx.js"></script>
+<script src="js/world.js"></script>
+<script src="js/story.js"></script>
+<script src="js/interact.js"></script>
+<script src="js/camera.js"></script>
+<script src="js/intro.js"></script>
+<script src="js/editor.js"></script>
+<script src="js/main.js"></script>
+<script>if ("serviceWorker" in navigator && location.protocol === "https:") navigator.serviceWorker.register("sw.js");</script>
+</body>
+</html>
